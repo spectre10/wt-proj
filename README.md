@@ -2,11 +2,12 @@
 
 This project is hosted at (https://wt-proj.vercel.app/).
 
-## This project was built using the following T3 stack:
+## This project was built using the following technologies:
 
-- Next.js
+- Next.js (React.js)
 - Tailwind CSS
 - tRPC
+
 
 ## Running locally
 
