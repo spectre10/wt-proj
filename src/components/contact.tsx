@@ -1,6 +1,6 @@
 // import { type NextPage } from "next";
 // import Link from "next/link";
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import { api } from "~/utils/api";
 // import { useMutation } from "@tanstack/react-query";
 
@@ -18,7 +18,7 @@ const Contact = () => {
     //         resolve([{ data: "ok" }]);
     //     });
     // };
-    const { status, data, error, refetch } = api.anime.paradise.useQuery({ name: name, email: email, message: email }, {
+    const { refetch } = api.anime.paradise.useQuery({ name: name, email: email, message: email }, {
         refetchOnWindowFocus: false,
         enabled: false
     })
@@ -26,7 +26,7 @@ const Contact = () => {
     function isValidEmail(e: string) {
         return /\S+@\S+\.\S+/.test(e);
     }
-    const handleSubmit = (event: any) => {
+    const handleSubmit = async (event: { preventDefault: () => void; } ) => {
         event.preventDefault();
         if (!isValidEmail(email)) {
             alert("Invalid Email");
@@ -37,7 +37,7 @@ const Contact = () => {
             alert("Enter a message");
         }
         else {
-            refetch();
+            await refetch();
             setsubmit(true);
         }
     }
