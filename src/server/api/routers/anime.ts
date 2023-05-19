@@ -10,17 +10,24 @@ const telegram = new Telegram(env.TELEGRAM_API, {
 });
 const bot = new Telegraf(env.TELEGRAM_API);
 
-bot.use(async (ctx) => {
-    var c: any = ctx.from;
-    telegram.sendMessage(c.id, `your id is ${c.id}`);
+bot.use((ctx) => {
+    let c = ctx.from;
+    telegram.sendMessage(env.GHANSHYAM_TOKEN, `your id is ${c?.id}`);
 })
-bot.launch();
+
+try {
+    bot.launch();
+} catch (e) {
+    console.log(e);
+} finally {
+    console.log("Error occured. check console.");
+}
 
 export const hell = createTRPCRouter({
     paradise: publicProcedure
         .input(z.object({ name: z.string(), email: z.string(), message: z.string() }))
-        .query(({ input }) => {
-            telegram.sendMessage(env.GHANSHYAM_TOKEN, `Name: ${input.name}\nEmail: ${input.email}\nMessage: ${input.message}`)
+        .query(async ({ input }) => {
+            await telegram.sendMessage(env.GHANSHYAM_TOKEN, `Name: ${input.name}\nEmail: ${input.email}\nMessage: ${input.message}`)
             return {
                 name: `anime-name is ${input.name}`,
             };

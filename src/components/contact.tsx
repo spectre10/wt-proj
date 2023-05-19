@@ -30,7 +30,13 @@ const Contact = () => {
         event.preventDefault();
         if (!isValidEmail(email)) {
             alert("Invalid Email");
-        } else {
+        } else if (name === "") {
+            alert("Enter a Name");
+        }
+        else if (message === "") {
+            alert("Enter a message");
+        }
+        else {
             refetch();
             setsubmit(true);
         }
