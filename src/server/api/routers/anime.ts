@@ -10,18 +10,16 @@ const telegram = new Telegram(env.TELEGRAM_API, {
 });
 const bot = new Telegraf(env.TELEGRAM_API);
 
-bot.use((ctx) => {
-    let c = ctx.from;
-    telegram.sendMessage(env.GHANSHYAM_TOKEN, `your id is ${c?.id}`);
+bot.use(async (ctx) => {
+    const c = ctx.from;
+    await telegram.sendMessage(env.GHANSHYAM_TOKEN, `your id is ${c?.id}`);
 })
 
-try {
-    bot.launch();
-} catch (e) {
-    console.log(e);
-} finally {
-    console.log("Error occured. check console.");
-}
+bot.launch().catch((err)=>{
+    console.log(err);
+})
+// tslint:disable-next-line:no-unsafe-any
+.then(()=>{console.log("error!")})
 
 export const hell = createTRPCRouter({
     paradise: publicProcedure
