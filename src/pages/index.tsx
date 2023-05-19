@@ -2,6 +2,8 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Navbar from "~/components/navbar";
+import Contact from "~/components/contact";
+import Footer from "~/components/footer";
 // import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
@@ -25,27 +27,55 @@ const Home: NextPage = () => {
                         <p className="text-2xl font-light font-sans">Hey there, I am Ghanshyam. I am currently persuing Electronics and Communnications Engineering from L.D. College of Engineering. My interests lie in Software Development, Competitive Programming and Sports.</p>
                     </div>
                 </div>
-                <div className="h-[800px] bg-[#F0EDD4] border-black border-t-2 px-48" id="skills">
-                    <h1 className="text-center mt-20 text-3xl font-sans mb-16">Following are the technologies and skills I am most familier with:</h1>
+                <div className="h-[900px] bg-[#F0EDD4] border-black border-t-2 px-72" id="skills">
+                    <h1 className="text-center mt-16 text-4xl font-sans mb-16">Following are the languages I am familier with:</h1>
+                    <div className="text-center mb-28">
+                        <ul className="list-disc list-inside text-2xl inline-block text-left">
+                            <li>C++</li>
+                            <li>Javascript</li>
+                            <li>Golang</li>
+                            <li>Python</li>
+                            <li>Lua</li>
+                        </ul>
+                    </div>
+                    <h1 className="text-center mt-20 text-4xl font-sans mb-16">Following are the technologies and skills I am most familier with:</h1>
                     <div className="grid grid-cols-3">
                         <div className="text-center">
-                            <h2 className="text-xl">Frontend:</h2>
+                            <h2 className="text-2xl mb-9">Frontend:</h2>
+                            <ul className="list-disc list-inside text-xl inline-block text-left">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>ReactJS</li>
+                                <li>TailwindCSS</li>
+                            </ul>
                         </div>
-                        <div className="">
-                            <h2 className="text-center text-xl m-2">Backend:</h2>
-                            <ul className="list-disc list-inside ml-[40%]">
+                        <div className="text-center ">
+                            <h2 className="text-2xl mb-9">Backend:</h2>
+                            <ul className="list-disc list-inside text-xl inline-block text-left">
                                 <li>NodeJS</li>
                                 <li>ExpressJS</li>
                                 <li>MongoDB</li>
                                 <li>Fasthttp (Go)</li>
+                                <li>tRPC</li>
+                                <li>WebSockets</li>
                             </ul>
                         </div>
                         <div className="text-center">
-                            <h2 className="text-xl">Miscellaneous:</h2>
-                            <ul></ul>
+                            <h2 className="text-2xl mb-9">Miscellaneous:</h2>
+                            <ul className="list-disc list-inside text-xl inline-block text-left">
+                                <li>Competitive Programming</li>
+                                <li>Data Structures</li>
+                                <li>Algorithms</li>
+                                <li>Computer Networks</li>
+                                {/* <li>tRPC</li> */}
+                                {/* <li>WebSockets</li> */}
+                            </ul>
                         </div>
                     </div>
                 </div>
+                <Contact />
+                <Footer />
             </main>
         </>
     );
