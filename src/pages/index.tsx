@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                         <Image src="/20230201_163523.jpg" width={500} height={300} alt="Profile pic" className="ml-60 rounded-lg"/>
                     </div>
                     <div className="basis-1/2 mr-20 pr-40">
-                        <p className="text-2xl font-light font-sans">Hey there, I am Ghanshyam. I am currently persuing Electronics and Communnications Engineering from L.D. College of Engineering. My interests lie in Software Development, Competitive Programming and Sports.</p>
+                        <p className="text-2xl font-light font-sans text-white">Hey there, I am Ghanshyam. I am currently persuing Electronics and Communnications Engineering from L.D. College of Engineering. My interests lie in Software Development, Competitive Programming and Sports.</p>
                     </div>
                 </div>
                 <div className="h-[900px] bg-[#F0EDD4] border-black border-t-2 px-72" id="skills">
