@@ -22,7 +22,7 @@ const Home: NextPage = () => {
                 <Navbar />
                 <div className="flex flex-row gap-0 items-center justify-center h-screen w-full bg-[#FAE3D9] pb-20" id="about">
                     <div className="basis-1/2 flex items-center justify-center">
-                        <Image src="/20230201_163523.jpg" width={500} height={300} alt="Profile pic" className="ml-60 rounded-md"/>
+                        <Image src="/20230201_163523.jpg" width={500} height={300} alt="Profile pic" className="ml-60 rounded-lg"/>
                     </div>
                     <div className="basis-1/2 mr-20 pr-40">
                         <p className="text-2xl font-light font-sans">Hey there, I am Ghanshyam. I am currently persuing Electronics and Communnications Engineering from L.D. College of Engineering. My interests lie in Software Development, Competitive Programming and Sports.</p>
