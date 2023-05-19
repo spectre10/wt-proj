@@ -84,7 +84,7 @@ const Contact = () => {
                     <div className="relative">
                       <label
                         htmlFor="email"
-                        c GhanshyamlassName="text-sm leading-7 text-gray-600"
+                        className="text-sm leading-7 text-gray-600"
                       >
                         Email
                       </label>
