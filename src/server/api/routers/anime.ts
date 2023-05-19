@@ -12,14 +12,11 @@ const bot = new Telegraf(env.TELEGRAM_API);
 
 bot.use(async (ctx) => {
     const c = ctx.from;
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     await telegram.sendMessage(env.GHANSHYAM_TOKEN, `your id is ${c?.id}`);
 })
 
-bot.launch().catch((err)=>{
-    console.log(err);
-})
-// tslint:disable-next-line:no-unsafe-any
-.then(()=>{console.log("error!")})
+void bot.launch();
 
 export const hell = createTRPCRouter({
     paradise: publicProcedure
